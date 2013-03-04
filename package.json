@@ -9,7 +9,8 @@
   "dependencies": {
     "coffee-script": "*",
     "express": "*",
-    "eco": "*"
+    "eco": "*",
+    "consolidate": "*"
   },
   "repository": {
     "type": "git",
