@@ -8,6 +8,7 @@ app.engine 'eco', cons.eco
 
 app.configure ->
   app.use express.static("#{__dirname}/public")
+  app.use '/application.css', less("#{__dirname}/less/bootstrap.less")
 
 app.get '/', (req, res) ->
   res.render 'index.eco',
