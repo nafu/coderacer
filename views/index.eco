@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Our Page</title>
   <script type="text/javascript" src="/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="/application.css">
 </head>
 <body>
-  <%= @title %>
+  <h1><%= @title %></h1>
 </body>
 </html>
