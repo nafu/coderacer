@@ -10,7 +10,8 @@
     "coffee-script": "*",
     "express": "*",
     "eco": "*",
-    "consolidate": "*"
+    "consolidate": "*",
+    "connect-lesscss": "*"
   },
   "repository": {
     "type": "git",

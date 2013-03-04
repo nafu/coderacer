@@ -1,6 +1,7 @@
 require 'coffee-script'
 express = require 'express'
 cons = require 'consolidate'
+less = require 'connect-lesscss'
 
 app = express()
 app.engine 'eco', cons.eco
