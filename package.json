@@ -11,7 +11,8 @@
     "express": "*",
     "eco": "*",
     "consolidate": "*",
-    "connect-lesscss": "*"
+    "connect-lesscss": "*",
+    "socket.io": "*"
   },
   "repository": {
     "type": "git",
