@@ -23,5 +23,8 @@ app.get '/foo', (req, res) ->
   res.render 'index.eco',
     title: 'Fooo!!!'
 
+io.sockets.on 'connection', (socket) ->
+  socket.emit 'server-update', "Here is a message from the server"
+
 server.listen(3000)
 console.log "Server is listening"
