@@ -2,6 +2,7 @@ require 'coffee-script'
 express = require 'express'
 cons = require 'consolidate'
 less = require 'connect-lesscss'
+compiler = require 'connect-compiler'
 
 app = express()
 http = require 'http'
@@ -10,8 +11,9 @@ app.engine 'eco', cons.eco
 io = require('socket.io').listen(server)
 
 app.configure ->
-  app.use express.static("#{__dirname}/public")
   app.use '/application.css', less("#{__dirname}/less/application.less")
+  app.use compiler {src: "#{__dirname}/public", enabled: ['coffee']}
+  app.use express.static("#{__dirname}/public")
 
 app.get '/', (req, res) ->
   res.render 'index.eco',
