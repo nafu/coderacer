@@ -28,5 +28,9 @@ io.sockets.on 'connection', (socket) ->
     socket.emit 'server-update', "Here is a message from the server"
   , 3000
 
+  socket.on 'message-sent', (message) ->
+    console.log 'MESSAGE FROM BROWSER', message
+    io.sockets.emit 'new-message', message
+
 server.listen(3000)
 console.log "Server is listening"
