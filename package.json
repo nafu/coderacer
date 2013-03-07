@@ -12,6 +12,7 @@
     "eco": "*",
     "consolidate": "*",
     "connect-lesscss": "*",
+    "connect-compiler": "*",
     "socket.io": "*"
   },
   "repository": {
