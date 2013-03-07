@@ -1,5 +1,9 @@
-socket = io.connect();
+jQuery () ->
+  socket = io.connect();
 
-socket.on 'server-update', (message) ->
-  console.log "We have an update"
-  console.log message
+  $('#send').click () ->
+    console.log "Send Clicked"
+
+  socket.on 'server-update', (message) ->
+    console.log "We have an update"
+    console.log message
