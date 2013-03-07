@@ -24,7 +24,9 @@ app.get '/foo', (req, res) ->
     title: 'Fooo!!!'
 
 io.sockets.on 'connection', (socket) ->
-  socket.emit 'server-update', "Here is a message from the server"
+  setTimeout () ->
+    socket.emit 'server-update', "Here is a message from the server"
+  , 3000
 
 server.listen(3000)
 console.log "Server is listening"
